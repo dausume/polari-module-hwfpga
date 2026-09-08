@@ -2,7 +2,7 @@
 Selftest for hwfpga (hwsim-3).
 
 Run from polari-framework/:
-  python3 -m hwfpga.selftest_fpga
+  python3 -m hwfpga.fpga_selftest
 
 Stdlib + fake manager for generation checks; when `verilator` is on
 PATH (oss-cad-suite) the generated core is ACTUALLY SIMULATED: the
@@ -18,7 +18,7 @@ import sys
 import tempfile
 import types
 
-from hwfpga import fpga_verilog as fv
+from hwfpga.custom import fpga_verilog as fv
 from hwfpga.fpga_basis import SEED_REGISTER_MAPS, SEED_REGISTERS
 
 _results = []
